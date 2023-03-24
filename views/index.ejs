@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/fcc1b3e424.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-cloud-arrow-up fa-3x desktop-icon"></i>
+                <i class="fa-solid fa-cloud-arrow-up fa-2x mobile-icon"></i>
+                <h1>Upload It!</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a class="nav-btn" href="#start">Start Uploading</a></li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars fa-2x burger-menu"></i>
+            <div class="mobile-nav">
+                <i class="fa-solid fa-xmark fa-3x close-menu"></i>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li class="mobile-btn"><a class="nav-btn" href="#start">Start Uploading</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section id="home" class="home">
+                <i class="fa-solid fa-cloud-arrow-up fa-9x"></i>
+                <h1 class="intro">Ready to upload your files ? Start Now!</h1>
+                <p>Upload It is a file sharing website that allows you to share your files with whoever you want
+                    !<br>You can also protect your file using a password in order to prevent unwanted access to the file
+                    !</p>
+                <a href="#start"><button class="home-btn">Upload Now!</button></a>
+            </section>
+            <section id="start" class="start">
+                <form enctype="multipart/form-data" class="upload-form">
+                    <i class="fa-solid fa-cloud-arrow-up fa-5x"></i>
+                    <label class="file" for="file">
+                        <input type="file" id="file" aria-label="File browser example">
+                        <div class="custom-input">
+                            <div class="file-name">No file Chosen</div>
+                            <div class="upload-btn"><i class="fa-solid fa-cloud-arrow-up"></i>Choose file</div>
+                        </div>
+                    </label>
+                    <label for="check" class="check-label">
+                        <input type="checkbox" id="check" class="checkbox">
+                        <span>Protect by password</span>
+                    </label>
+                    <label for="password" class="pass-div">
+                        <span>Type a password:</span>
+                        <input type="password" id="password" class="password">
+                    </label>
+                    <input type="submit" value="Upload">
+                    <div class="download-link">
+                        
+                    </div>
+                </form>
+            </section>
+            <section id="about" class="about">
+                <h1>About Us</h1>
+                <p>Upload It is a file sharing website that allows you to share your files with whoever you want !
+                    You can also protect your file using a password in order to prevent unwanted access to the file !
+                </p>
+                <h2>What We offer?</h2>
+                <div class="services">
+                    <div class="service">
+                        <i class="fa-solid fa-star fa-2x"></i>
+                        <h3>Simplicity</h3>
+                        <p>Our App is very simple to use, it doesn't require any sort of registration and it's very easy
+                            to use</p>
+                    </div>
+                    <div class="service">
+                        <i class="fa-solid fa-lock fa-2x"></i>
+                        <h3>confidentiality</h3>
+                        <p>Our App offers you a lot of privacy and prevent unwanted access to your files by offering to
+                            protect them with a password of your choice!</p>
+                    </div>
+                    <div class="service">
+                        <i class="fa-solid fa-stopwatch fa-2x"></i>
+                        <h3>Speed</h3>
+                        <p>Our App helps you upload your files in no time!</p>
+                    </div>
+                </div>
+            </section>
+            <section id="contact-us" class="contact-us">
+                <h1>Contact Us</h1>
+                <p>You have any question? Don't hesitate to contact us!</p>
+                <form action="mailto:ahmedgouasmia.ag@gmail.com">
+                    <div class="left">
+                        <input type="email" placeholder="Enter your email">
+                        <textarea placeholder="Type your question here"></textarea>
+                    </div>
+                    <input type="submit" value="Send">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="logo">
+                <i class="fa-solid fa-cloud-arrow-up fa-3x"></i>
+                <h1>Upload It!</h1>
+            </div>
+            <h1>Developed By: <span>Ahmed Gouasmia</span></h1>
+            <div class="social">
+                <a href="https://github.com/SilverBullet19">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ahmed-gouasmia-59baa1245/">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <script src="./main.js"></script>
+        <script src="./api-requests.js"></script>
+    </div>
+</body>
+
+</html>

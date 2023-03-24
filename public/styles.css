@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+:root {
+    --bg-color: #E5E5E6;
+    --text-color: #1E202B;
+    --primary-color: #0351F8;
+    --secondary-color: #f8c65a;
+    --hover-color: #f3b93d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    position: relative;
+}
+
+header .burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+header .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    transition: 0.7s;
+}
+
+header .mobile-nav > i {
+    align-self: flex-end;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+header .active {
+    top: 0;
+}
+
+header .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .mobile-nav ul li {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid black;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+header .mobile-nav ul li:not(.mobile-btn):hover {
+    background-color: var(--bg-color);
+}
+
+header .mobile-nav ul .mobile-btn {
+    padding: 25px;
+}
+
+header .mobile-nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header .mobile-nav ul li .nav-btn {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    transition: 0.4s;
+}
+
+header .mobile-nav ul li .nav-btn:hover {
+    background-color: var(--hover-color);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .logo i {
+    color: var(--primary-color);
+}
+
+header .logo .mobile-icon {
+    display: none;
+}
+
+header .logo h1 {
+    font-size: 40px;
+    color: var(--text-color);
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: var(--text-color);
+}
+
+header nav a:not(.nav-btn):hover:after {
+    width: 100%;
+    transition: 0.4s;
+}
+
+header nav .nav-btn {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin-left: 30px;
+    transition: 0.4s;
+}
+
+header nav .nav-btn:hover {
+    background-color: #f3b93d;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.home i {
+    color: var(--primary-color);
+}
+
+.home h1 {
+    font-size: 60px;
+    max-width: 60%;
+}
+
+.home p {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 70%;
+}
+
+.home .home-btn {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    transition: 0.4s;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.home .home-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+}
+
+.start form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.start form .download-link {
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.start form .download-link a {
+    color: white;
+}
+
+.start form .download-link i {
+    cursor: pointer;
+}
+
+form > i {
+    color: var(--primary-color);
+}
+
+.file input {
+    display: none;
+}
+
+.file .custom-input {
+    display: flex;
+    align-items: center;
+}
+
+.file .custom-input .file-name {
+    border: 1px solid var(--secondary-color);
+    background-color: white;
+    padding: 10px;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.file .custom-input .upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid var(--secondary-color);
+    transition: 0.4s;
+}
+
+.file .custom-input .upload-btn:hover {
+    background-color: var(--hover-color);
+}
+
+form .checkbox {
+    scale: 1.2;
+}
+
+form .pass-div {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form .password {
+    height: 25px;
+    border: 1px solid black;
+    outline: none;
+    text-indent: 5px;
+}
+
+form input[type="submit"] {
+    background-color: var(--secondary-color);
+    padding: 10px 15px;
+    transition: 0.4s;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--hover-color);
+}
+
+.about, .contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about h1, .contact-us h1 {
+    font-size: 60px;
+}
+
+.about p {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 50%;
+}
+
+.about h2 {
+    font-size: 40px;
+}
+
+.about .services {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.about .services .service {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .services .service i {
+    color: var(--hover-color);
+}
+
+.contact-us p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contact-us form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.contact-us form .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-us form .left input, .contact-us form .left textarea {
+    border: 1px solid var(--secondary-color);
+    outline: none;
+}
+
+.contact-us form .left input[type="email"] {
+    height: 30px;
+    width: 200px;
+    text-indent: 10px;
+} 
+
+.contact-us form .left textarea {
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 10px 40px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+footer .logo i {
+    color: var(--primary-color);
+}
+
+footer .social {
+    display: flex;
+    gap: 10px;
+}
+
+footer .social a {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    header .burger-menu {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+    header .logo .mobile-icon {
+        display: block;
+    }
+    header .logo .desktop-icon {
+        display: none;
+    }
+    header .logo h1 {
+        font-size: 30px;
+    }
+    .start form {
+        width: 85%;
+    }
+    .contact-us form {
+        flex-direction: column;
+    }
+    .contact-us form .left textarea {
+        width: 250px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer h1 {
+        font-size: 27px;
+    }
+}
